@@ -64,6 +64,19 @@ module.exports.register = async (req, res, next) => {
     }
 }
 
+module.exports.updateCount = async (request, response, next) => {
+    try {
+        const provider = await Provider.findByIdAndUpdate({ _id: request.params.id},
+            {$set : {username: request.body.username, email:request.body.email, category: request.body.selectedOptions}},
+        )
+        response.status(200).json(provider)
+        console.log(provider)
+    }catch (ex){
+        next(ex)
+    }
+}
+
+
 module.exports.logOut = (req, res, next) => {
     try {
         if (!req.params.id) return res.json({ msg: 'User id is required ' })

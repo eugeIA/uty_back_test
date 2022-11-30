@@ -18,8 +18,7 @@ module.exports.addPreOrder = async (request, response, next) => {
 
 module.exports.getAllPreOrder = async (request, response) => {
     try {
-        const categorie = await Categorie.findOne({ name: request.params.name })
-        const preOrders = await PreOrder.find({ category: categorie._id })
+        const preOrders = await PreOrder.find({})
         response.status(200).json(preOrders)
     } catch (error) {
         response.status(500).json(error)

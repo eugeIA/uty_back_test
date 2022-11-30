@@ -27,7 +27,7 @@ const providerSchema = new mongoose.Schema({
         min: 100,
     },
     category: {
-        type: String,
+        type: Array,
         min: 50,
     },
 })
