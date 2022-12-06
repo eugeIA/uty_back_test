@@ -24,3 +24,12 @@ module.exports.getAllPreOrder = async (request, response) => {
         response.status(500).json(error)
     }
 }
+
+module.exports.getPreOrder = async (request, response) => {
+    try {
+        const preOrder = await PreOrder.findOne(request.params._id)
+        response.status(200).json(preOrder)
+    }catch(error) {
+        response.status(500).json(error)
+    }
+}

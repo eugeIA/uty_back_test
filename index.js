@@ -21,6 +21,9 @@ mongoose
     })
     
 
+app.get("/", (req, res) => {
+    return res.send("Hello word")
+})
 app.use('/api/auth', authRoutes)
 app.use('/api/preOrder', preOrderRoutes)
 app.use('/api/provider', providerRoutes)
