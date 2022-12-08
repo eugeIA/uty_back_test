@@ -21,11 +21,6 @@
         "pm2": "^5.2.2"
     },
     "devDependencies": {
-        "nodemon": "^2.0.20",
-        "eslint": "^8.28.0",
-        "eslint-config-prettier": "^8.5.0",
-        "husky": "^4.3.8",
-        "lint-staged": "^13.0.4",
-        "prettier": "2.8.0"
+        "nodemon": "^2.0.20"
     }
 }
